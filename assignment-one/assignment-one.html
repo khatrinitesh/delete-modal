@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<a href="#" class="btn_modal">Click</a>
+
+	<div class="modal_dialog">
+		<div class="modal_content">
+			<div class="modal_header">
+				<h3>Header</h3>
+				<a href="#" class="close">&times;</a>
+			</div>
+			<div class="modal_body">
+				<p>This is the paragraph.</p>
+				<p>This is the paragraph.</p>
+				<p>This is the paragraph.</p>
+				<p>This is the paragraph.</p><p>This is the paragraph.</p>
+			</div>
+			<div class="modal_footer">
+				<p>This is the footer</p>
+				<a href="#" class="btn_close">Close</a>
+			</div>
+		</div>
+	</div>
+	<script src='js/jquery-1.12.0.min.js'></script>
+	<script>
+	 $(document).ready(function(){
+          $(".btn_modal").click(function(){
+               $(".modal_dialog").fadeIn('slow');
+          });   
+           $(".close,.btn_close").click(function(){
+               $(".modal_dialog").fadeOut('slow');
+          });  
+	 });
+	</script>
+</body>
+</html>
